@@ -1,0 +1,21 @@
+{
+  "name": "projeto-oo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "watch": "npx tsc --watch",
+    "dev": "npm run watch & npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
