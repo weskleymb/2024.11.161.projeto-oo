@@ -4,8 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc",
-    "start": "node dist/index.js",
-    "watch": "npx tsc --watch",
+    "start": "npm run build && node dist/index.js",
     "dev": "npm run watch & npm run start"
   },
   "keywords": [],
