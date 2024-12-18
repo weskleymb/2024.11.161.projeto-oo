@@ -4,17 +4,10 @@ import { Conta } from './classes/conta.js';
 const irineu = new Conta(1, 'Irineu', 50);
 const erick = new Conta(2, 'Erick', 100);
 
-console.log(irineu.saldo);
+console.log(`Saldo de Irineu: R$ ${irineu.saldo}`);
+console.log(`Saldo de Erick: R$ ${erick.saldo}`);
 
-irineu.depositar(100);
+irineu.transferir(erick, 10);
 
-console.log(irineu.saldo);
-
-irineu.sacar(50);
-
-console.log(irineu.saldo);
-
-erick.transferir(irineu, 50);
-
-console.log(irineu.saldo);
-console.log(erick.saldo);
+console.log(`Saldo de Irineu: R$ ${irineu.saldo}`);
+console.log(`Saldo de Erick: R$ ${erick.saldo}`);
