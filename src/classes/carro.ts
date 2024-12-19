@@ -1,5 +1,4 @@
-
-export class Carro {
+class Carro {
 
     // metodo construtor e atributos
     constructor(
@@ -73,3 +72,4 @@ export class Carro {
 
 }
 
+export default Carro;

@@ -1,12 +1,13 @@
+class Conta {
 
-export class Conta {
+    private _numero: number;
+    private _titular: string;
+    private _saldo: number = 0;
 
-    constructor(
-        private _numero: number,
-        private _titular: string,
-        private _saldo: number
-    ) {
-
+    constructor(numero: number, titular: string, saldo: number) {
+        this._numero = numero;
+        this._titular = titular;
+        this.depositar(saldo);
     }
 
     public get numero(): number {
@@ -34,14 +35,14 @@ export class Conta {
             throw new Error(`Valor R$ ${valor} para depósito inválido`);
         }
         this._saldo += valor;
-        return this._saldo;
+        return this.saldo;
     }
 
     public sacar(valor: number): number {
         if (valor <= 0) {
             throw new Error(`Valor R$ ${valor} para saque inválido`);
         }
-        if (this._saldo < valor) {
+        if (this.saldo < valor) {
             throw new Error(`Saldo insuficiente para saque de R$ ${valor}`);
         }
         this._saldo -= valor;
@@ -55,3 +56,5 @@ export class Conta {
     }
 
 }
+
+export default Conta;
